@@ -1,0 +1,23 @@
+package ee.session02plus;
+
+import ee.session02plus.model.entity.User;
+import ee.session02plus.model.service.UserService;
+
+//@Slf4j
+public class Main {
+    public static void main(String[] args) throws Exception {
+
+        User user = User
+                .builder()
+                .username("Mobina")
+                .password("mbyna")
+                .family("rahi")
+                .name("mobina")
+                .build();
+
+        UserService userService=new UserService();
+        userService.saveUser(user);
+
+
+    }
+}

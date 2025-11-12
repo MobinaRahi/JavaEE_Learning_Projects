@@ -12,22 +12,22 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
 
-
+EntityManagerFactory factory = Persistence.createEntityManagerFactory("UsersPU");
         EntityManager entityManager=factory.createEntityManager();
         EntityTransaction entitytransaction=entityManager.getTransaction();
         entitytransaction.begin();
-//        User user = User
-//                .builder()
-//                .id(1)
-//                .username("Mobina")
-//                .password("mbyna")
-//                .build();
+        User user = User
+                .builder()
+                .id(1)
+                .username("Mobina")
+                .password("mbyna")
+                .build();
 
         //save
 //        entityManager.persist(user);
 
         //Update
-//        entityManager.merge(user);
+        entityManager.merge(user);
 
         //DELETE
 //       User user= entityManager.find(User.class, 1);
@@ -38,13 +38,13 @@ public class Main {
 //        System.out.println(user);
 
         //findAll
-        TypedQuery<User> query=entityManager.createQuery("select u from userEntity u",User.class);
-        List<User> list=query.getResultList();
-
-
-
-        entitytransaction.commit();
-        entityManager.close();
+//        TypedQuery<User> query=entityManager.createQuery("select u from userEntity u",User.class);
+//        List<User> list=query.getResultList();
+//
+//
+//
+//        entitytransaction.commit();
+//        entityManager.close();
 
 
 //            UserService userService = new UserService();
