@@ -24,4 +24,7 @@ public class JpaProvider {
     }
 
 
+    public void close() {
+        factory.close();
+    }
 }

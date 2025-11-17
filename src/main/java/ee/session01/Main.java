@@ -16,39 +16,14 @@ EntityManagerFactory factory = Persistence.createEntityManagerFactory("UsersPU")
         EntityManager entityManager=factory.createEntityManager();
         EntityTransaction entitytransaction=entityManager.getTransaction();
         entitytransaction.begin();
-        User user = User
+        User user1 = User
                 .builder()
-                .id(1)
                 .username("Mobina")
                 .password("mbyna")
                 .build();
-
-        //save
-//        entityManager.persist(user);
-
-        //Update
-        entityManager.merge(user);
-
-        //DELETE
-//       User user= entityManager.find(User.class, 1);
-//        entityManager.remove(user);
-
-        //findById
-//        User user=entityManager.find(User.class, 2);
-//        System.out.println(user);
-
-        //findAll
-//        TypedQuery<User> query=entityManager.createQuery("select u from userEntity u",User.class);
-//        List<User> list=query.getResultList();
-//
-//
-//
-//        entitytransaction.commit();
-//        entityManager.close();
+        UserService userService=new UserService();
+        userService.saveUser(user1);
 
 
-//            UserService userService = new UserService();
-//            userService.saveUser(user);
-////            log.info("user has been saved");
     }
 }

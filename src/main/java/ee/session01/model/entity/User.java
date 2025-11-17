@@ -17,7 +17,7 @@ import javax.validation.constraints.Pattern;
 @SuperBuilder
 @ToString
 
-@Entity(name = "userEntity")
+@Entity(name = "userEntity01")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

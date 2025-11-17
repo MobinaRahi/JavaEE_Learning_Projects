@@ -78,7 +78,7 @@ public class UserRepository {
         EntityManager entityManager = JpaProvider.instance.getEntityManager();
 
         try {
-            String jpql = "select u from userEntity u where u.username=:username";
+            String jpql = "select u from userEntity01 u where u.username=:username";
             TypedQuery<User> query = entityManager.createQuery(jpql, User.class);
             query.setParameter("username", username);
             List<User> userList = query.getResultList();
@@ -92,7 +92,7 @@ public class UserRepository {
         EntityManager entityManager = JpaProvider.instance.getEntityManager();
 
         try {
-            String jpql = "select u from userEntity u where u.username=:username and u.password=:password";
+            String jpql = "select u from userEntity01 u where u.username=:username and u.password=:password";
             TypedQuery<User> query = entityManager.createQuery(jpql, User.class);
             query.setParameter("username", username);
             query.setParameter("password", password);
@@ -107,7 +107,7 @@ public class UserRepository {
         EntityManager entityManager = JpaProvider.instance.getEntityManager();
 
         try {
-            String jpql = "select u from userEntity u ";
+            String jpql = "select u from userEntity01 u ";
             TypedQuery<User> query = entityManager.createQuery(jpql, User.class);
             List<User> userList = query.getResultList();
             return query.getResultList();
