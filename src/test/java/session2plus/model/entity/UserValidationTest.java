@@ -1,7 +1,7 @@
 package session2plus.model.entity;
 
 
-import ee.session02plus.model.entity.User;
+import ee.session02.ee2.model.entity.User;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

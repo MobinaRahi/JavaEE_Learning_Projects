@@ -2,9 +2,9 @@ package session2plus.model.repository;
 
 
 import com.github.javafaker.Faker;
-import ee.session02plus.model.common.JpaProvider;
-import ee.session02plus.model.repository.UserRepository;
-import ee.session02plus.model.entity.User;
+import ee.session02.ee2.model.common.JpaProvider;
+import ee.session02.ee2.model.repository.UserRepository;
+import ee.session02.ee2.model.entity.User;
 import org.junit.jupiter.api.*;
 
 import java.util.Locale;
